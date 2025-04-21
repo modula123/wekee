@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wekee | Moving & Academic Support</title>
+    <style>
+        :root {
+            --primary: #101010;
+            --accent: #F39C12;
+            --background: #FAFAFA;
+            --text-main: #222222;
+            --text-secondary: #555555;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 0 1rem;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: #fff;
+            padding: 1.5rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Satoshi', sans-serif;
+            font-size: 2rem;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            margin: 0 0.75rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-family: 'Neue Montreal', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1rem;
+        }
+
+        .section {
+            max-width: 960px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            flex: 1 1 280px;
+        }
+
+        footer {
+            background: #f2f2f2;
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        footer a {
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Wekee</h1>
+        <nav>
+            <a href="#who">Who We Are</a>
+            <a href="#what">What We Do</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>We Move. We Help. We Deliver.</h2>
+        <p>At Wekee, we specialize in professional moving services and academic support across Kigali and Rwanda-wide.
+            Whether it's relocating your home or assisting with your college hustle — we’ve got your back.</p>
+    </section>
+
+    <section id="who" class="section">
+        <h3>Who We Are</h3>
+        <p>Wekee is a dedicated service company providing reliable residential & office moving solutions and essential
+            task-based assistance for students. We blend professionalism with care — ensuring your goods and academic
+            tasks are handled with efficiency and excellence.</p>
+    </section>
+
+    <section id="what" class="section">
+        <h3>What We Do</h3>
+
+        <div class="grid" style="margin-bottom: 10px;">
+            <div class="card">
+                <h4>🏡 Residential Moving</h4>
+                <p>Secure and efficient moving with packaging/unpacking services.</p>
+              </div>
+              <div class="card">
+                <h4>🏢 Office Relocations</h4>
+                <p>Organized business moves with expert logistics.</p>
+              </div>
+        </div>
+
+
+        <div class="grid">
+
+            <div class="card">
+                <h4>📚 Academic Assistance</h4>
+                <p>Assignments, essays, corrections, and follow-ups handled for you.</p>
+            </div>
+            <div class="card">
+                <h4>✍️ Handwriting Service</h4>
+                <p>Neatly handwritten notes, reports, and more — quick turnaround.</p>
+            </div>
+            <div class="card">
+                <h4>🧾 Stationery & Printing</h4>
+                <p>Need books, printouts, pens or USBs? We deliver it all.</p>
+            </div>
+            <div class="card">
+                <h4>🍽 Food Delivery Help</h4>
+                <p>We pick up from restaurants and deliver to your doorstep.</p>
+            </div>
+            <div class="card">
+                <h4>💻 Final Year Projects</h4>
+                <p>Support for research, typing, formatting, printing, and binding.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Serving Kigali and all of Rwanda • Phone: <a href="tel:+250786969572">+250 786 969 572</a> • Email: <a
+                href="mailto:meyvnagency@gmail.com">meyvnagency@gmail.com</a></p>
+        <p>&copy; 2025 Wekee. Powered by <a href="https://meyvn.vercel.app">meyvn agency</a>.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
