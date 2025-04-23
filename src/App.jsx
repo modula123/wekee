@@ -7,14 +7,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./component/Layout";
 import Homepage from "./pages/Homepage";
 
-import PageTracker from './hooks/usePageTracking'
+import PageTracker from "./hooks/usePageTracking";
 
 const App = () => {
   return (
     <>
       <Analytics />
       <BrowserRouter>
-        <PageTracker /> 
+        <PageTracker />
         <Routes>
           <Route path="" element={<Layout />}>
             <Route index element={<Homepage />} />

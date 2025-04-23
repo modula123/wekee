@@ -56,8 +56,8 @@ const HomeServices = () => {
                     <h3>{service.title}</h3>
                     <span>{service.tag}</span>
                     <ul>
-                      {service.list.map((li) => (
-                        <li>{li}</li>
+                      {service.list.map((li,i) => (
+                        <li key={i}>{li}</li>
                       ))}
                     </ul>
                   </div>

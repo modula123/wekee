@@ -162,10 +162,14 @@ const Homepage = () => {
 
       <div className="homepage">
         <Homehero />
-        <WhyUs />
+        <div id="about">
+          <WhyUs />
+        </div>
         <HomeServices />
         <Chooseus />
-        <HomeContact />
+        <div id="contact">
+          <HomeContact />
+        </div>
       </div>
     </>
   );
