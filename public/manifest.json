@@ -3,9 +3,9 @@
   "short_name": "Wekee",
   "description": "Wekee connects Rwandans with reliable helpers for moving, errands, shopping, and more.",
   "start_url": "/",
-  "display": "standalone", // Use "standalone" to make the app behave like a native app
-  "background_color": "#ffffff", // Background color for loading screen
-  "theme_color": "#FF5A60", // Theme color for the browser toolbar
+  "display": "standalone", 
+  "background_color": "#ffffff", 
+  "theme_color": "#FF5A60", 
   "icons": [
     {
       "src": "icons/icon-192x192.png",
