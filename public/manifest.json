@@ -1,11 +1,11 @@
 {
-  "name": "Wekee",
   "short_name": "Wekee",
+  "name": "Wekee — Moving, Errands & Local Help in Rwanda",
   "description": "Wekee connects Rwandans with reliable helpers for moving, errands, shopping, and more.",
-  "start_url": "/",
-  "display": "standalone", 
-  "background_color": "#ffffff", 
-  "theme_color": "#FF5A60", 
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3e4c66",
   "icons": [
     {
       "src": "icons/icon-192x192.png",
