@@ -62,7 +62,7 @@ const Header = () => {
               </li>
             </ul>
             <div>
-              <button>
+              <button className="start">
                 <span className="icon">
                   <LuArrowUpRight />
                 </span>

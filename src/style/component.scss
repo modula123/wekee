@@ -120,6 +120,12 @@ $transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
       }
     }
 
+    .start {
+      @media (max-width: 560px) {
+        display: none;
+      }
+    }
+
     @media (min-width: 1115px) {
       .menu {
         display: none;

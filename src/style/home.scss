@@ -91,6 +91,10 @@ $transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
               background: transparent;
               border-color: $highlight-color;
 
+              @media (max-width: 590px) {
+                display: none;
+              }
+
               .icon {
                 background: $highlight-color;
                 color: $primary-color;
@@ -448,8 +452,8 @@ $transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
       align-items: start;
       grid-template-columns: 2fr 3fr;
 
-      @media (max-width: 650px) {
-        grid-template-columns: 1 1fr;
+      @media (max-width: 900px) {
+        grid-template-columns: 1fr;
       }
 
       .conts {
