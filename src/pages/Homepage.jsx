@@ -79,6 +79,87 @@ const Homepage = () => {
         </script>
       </Helmet>
 
+      {/* Schema.org */}
+      <Helmet>
+        <script type="application/ld+json">
+          {`
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Wekee",
+        "image": "https://wekee.vercel.app/images/brand/favicon.svg",
+        "url": "https://wekee.vercel.app",
+        "telephone": "+250-78X-XXX-XXX",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kigali",
+          "addressCountry": "RW"
+        },
+        "description": "Wekee connects Rwandans with reliable helpers for moving, errands, shopping, and more.",
+        "priceRange": "$",
+        "areaServed": [
+  "Kigali",
+  "Musanze",
+  "Huye",
+  "Rusizi",
+  "Rubavu",
+  "Nyagatare",
+  "Gakenke",
+  "Burera",
+  "Gicumbi",
+  "Rulindo",
+  "Gisagara",
+  "Kamonyi",
+  "Muhanga",
+  "Nyamagabe",
+  "Nyanza",
+  "Nyaruguru",
+  "Ruhango",
+  "Bugesera",
+  "Gatsibo",
+  "Kayonza",
+  "Kirehe",
+  "Ngoma",
+  "Rwamagana",
+  "Gasabo",
+  "Kicukiro",
+  "Nyarugenge",
+  "Karongi",
+  "Ngororero",
+  "Nyabihu",
+  "Nyamasheke",
+  "Rutsiro",
+  "Kacyiru",
+  "Kimihurura",
+  "Kimironko",
+  "Nyarutarama",
+  "Remera",
+  "Gatsata",
+  "Kinyinya",
+  "Gisozi",
+  "Bumbogo",
+  "Gikomero",
+  "Jabana",
+  "Jali",
+  "Nduba",
+  "Ndera",
+  "Rusororo",
+  "Rutunga",
+  "Muhima",
+  "Kiyovu",
+  "Nyamirambo",
+  "Nyabugogo",
+  "Kabuye",
+  "Nyange",
+  "Nyundo",
+  "Muhoza"
+]
+
+      }
+    `}
+        </script>
+      </Helmet>
+
       <div className="homepage">
         <Homehero />
         <WhyUs />

@@ -1,8 +1,7 @@
-
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-const usePageTracking = () => {
+const PageTracker = () => {
   const location = useLocation();
 
   useEffect(() => {
@@ -13,6 +12,8 @@ const usePageTracking = () => {
       });
     }
   }, [location]);
+
+  return null;
 };
 
-export default usePageTracking;
+export default PageTracker;

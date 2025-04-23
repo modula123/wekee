@@ -51,7 +51,7 @@ const HomeServices = () => {
             <div className="boxes">
               {services.map((service, index) => (
                 <div className="box" key={index}>
-                  <img src={service.img} alt="Cover" />
+                  <img src={service.img} loading="lazy" alt="Cover" />
                   <div className="conts">
                     <h3>{service.title}</h3>
                     <span>{service.tag}</span>

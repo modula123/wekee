@@ -3,18 +3,18 @@ import "./App.css";
 
 import { Analytics } from "@vercel/analytics/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import usePageTracking from "./hooks/usePageTracking";
 
 import Layout from "./component/Layout";
 import Homepage from "./pages/Homepage";
 
-const App = () => {
-  usePageTracking();
+import PageTracker from './hooks/usePageTracking'
 
+const App = () => {
   return (
     <>
       <Analytics />
       <BrowserRouter>
+        <PageTracker /> 
         <Routes>
           <Route path="" element={<Layout />}>
             <Route index element={<Homepage />} />
