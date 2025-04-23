@@ -89,7 +89,7 @@ const Homepage = () => {
         "name": "Wekee",
         "image": "https://wekee.vercel.app/images/brand/favicon.svg",
         "url": "https://wekee.vercel.app",
-        "telephone": "+250-78X-XXX-XXX",
+        "telephone": "+250-786-969-572",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Kigali",
@@ -153,7 +153,13 @@ const Homepage = () => {
   "Nyange",
   "Nyundo",
   "Muhoza"
-]
+],
+  "description": "Wekee connects Rwandans with reliable help for moving, errands, deliveries and more in Kigali, Musanze and Huye.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+250781996271",
+    "contactType": "Customer Service"
+  }
 
       }
     `}
