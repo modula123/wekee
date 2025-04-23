@@ -39,7 +39,7 @@ const Homepage = () => {
         <meta property="og:url" content="https://wekee.vercel.app/" />
         <meta
           property="og:image"
-          content="https://wekee.vercel.app/images/brand/favicon.svg"
+          content="https://wekee.vercel.app/images/brand/og.png"
         />
         <meta property="og:site_name" content="Wekee Rwanda" />
         <meta property="og:locale" content="en_US" />
@@ -57,7 +57,7 @@ const Homepage = () => {
         />
         <meta
           name="twitter:image"
-          content="https://wekee.vercel.app/images/brand/favicon.svg"
+          content="https://wekee.vercel.app/images/brand/og.png"
         />
         <meta name="twitter:site" content="@wekeerwanda" />
       </Helmet>
