@@ -1,0 +1,355 @@
+$primary-color: rgb(44, 44, 44);
+$accent-color: #e5b300;
+$highlight-color: #007c91;
+$gray-color: rgb(245, 245, 245);
+$neutral-color: rgb(75, 75, 75);
+
+$transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
+
+// NAVBAR
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 999999;
+  box-shadow: 0 0 0.033rem 0 $highlight-color;
+  backdrop-filter: blur(1rem);
+  background: rgba($gray-color, 0.6);
+
+  .content {
+    width: 100%;
+    position: relative;
+    gap: 3rem;
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 900;
+      color: $neutral-color;
+      transition: $transition;
+      user-select: none;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        display: flex;
+        padding: 0.8rem 1.2rem;
+        font-size: 1rem;
+        color: $primary-color;
+        text-transform: capitalize;
+        transition: $transition;
+
+        &:hover {
+          color: $accent-color;
+          border-radius: 6rem;
+          background: $gray-color;
+        }
+
+        &.active {
+          color: $gray-color;
+          border-radius: 6rem;
+          transition: $transition;
+          background: $highlight-color;
+
+          &:hover {
+            background: $neutral-color;
+          }
+        }
+      }
+
+      @media (max-width: 1115px) {
+        display: none;
+      }
+    }
+
+    button {
+      gap: 0.6rem;
+      display: flex;
+      font-weight: 500;
+      padding: 0.8rem 1.2rem;
+      align-items: center;
+      color: $gray-color;
+      border-radius: 1rem;
+      transition: $transition;
+      background: $primary-color;
+
+      span {
+        display: flex;
+
+        &.icon {
+          padding: 0.2rem;
+          font-size: 1.2rem;
+          color: $primary-color;
+          background: $gray-color;
+          border-radius: 0.4rem;
+          transition: all 2s ease-in-out;
+        }
+
+        &.text {
+          font-size: 1.1rem;
+          color: $gray-color;
+          transition: $transition;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: $primary-color;
+        background: $accent-color;
+
+        .icon {
+          background: $primary-color;
+          color: $accent-color;
+          border-radius: 0.6rem;
+          transform: rotate(315deg);
+        }
+
+        .text {
+          color: $primary-color;
+        }
+      }
+    }
+
+    @media (min-width: 1115px) {
+      .menu {
+        display: none;
+      }
+    }
+
+    .menu {
+      position: relative;
+
+      button {
+        font-size: 2rem;
+        padding: 0.3rem 0.4rem;
+        border-radius: 0.3rem;
+        transition: $transition;
+
+        &:hover {
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+}
+.menu-modal {
+  width: 100%;
+  z-index: 999999;
+  position: fixed;
+  transition: all $transition ease-in-out;
+  backdrop-filter: blur(1rem);
+  background: rgba($gray-color, 0.3);
+
+  .content {
+    width: 100%;
+    padding: 1rem 0;
+    position: relative;
+
+    button {
+      span {
+        display: flex;
+      }
+
+      margin-bottom: 1rem;
+      padding: 0.3rem;
+      font-size: 2rem;
+      display: flex;
+      color: $primary-color;
+      border-radius: 0.3rem;
+      background: $gray-color;
+      transition: $transition;
+
+      &:hover {
+        background: $accent-color;
+        cursor: pointer;
+      }
+    }
+
+    ul {
+      margin-top: 1rem;
+      position: relative;
+      gap: 0.4rem;
+      display: flex;
+      flex-direction: column;
+
+      a {
+        display: flex;
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: $primary-color;
+        transition: $transition;
+
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+}
+
+// FOOTER
+.footer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #000;
+
+  .bg {
+    background: $primary-color;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+    img {
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .main {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 6rem;
+    background: rgba($primary-color, 0.9);
+    top: 0;
+    left: 0;
+
+    .content {
+      position: relative;
+      padding: 6rem 0;
+      width: 100%;
+      gap: 2rem;
+      display: grid;
+      align-items: start;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+      .col {
+        position: relative;
+
+        h3 {
+          font-weight: 600;
+          font-size: 1.3rem;
+          color: $gray-color;
+          margin-bottom: 1.5rem;
+        }
+
+        ul {
+          gap: 0.6rem;
+          display: flex;
+          flex-direction: column;
+
+          a {
+            font-size: 1rem;
+            transition: $transition;
+            color: $highlight-color;
+
+            &:hover {
+              color: $accent-color;
+            }
+          }
+        }
+
+        h2 {
+          font-size: 2rem;
+          color: white;
+          margin-bottom: 1.5rem;
+        }
+
+        p {
+          opacity: 0.8;
+          position: relative;
+          color: $gray-color;
+
+          &.copy {
+            margin-top: 2rem;
+            opacity: 1;
+          }
+        }
+
+        form {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          input {
+            width: 100%;
+            font-size: 1rem;
+            color: $gray-color;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid;
+            transition: $transition;
+            border-color: $highlight-color;
+
+            &:active,
+            &:focus {
+              color: $accent-color;
+            }
+          }
+
+          button {
+            position: absolute;
+            right: 0;
+            top: 50%;
+
+            font-size: 2rem;
+            color: $gray-color;
+            transform: translateY(-70%);
+            transition: $transition;
+
+            &:hover {
+              color: $accent-color;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .socials {
+          gap: 0.4rem;
+          display: flex;
+          align-items: center;
+
+          a {
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            border: 1px solid;
+            color: $gray-color;
+            border-radius: 1rem;
+            transition: $transition;
+
+            span {
+              display: flex;
+            }
+
+            &:hover {
+              background: $accent-color;
+              border-color: transparent;
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+
+    .tooltip {
+      font-size: 0.8rem;
+      padding: 0.3rem;
+      color: $accent-color;
+      background: $primary-color;
+    }
+  }
+}

@@ -1,206 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/brand/favicon.svg" />
+
+    <!-- Mobile - display optimization -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wekee | Moving & Academic Support</title>
-    <style>
-        :root {
-            --primary: #101010;
-            --accent: #F39C12;
-            --background: #FAFAFA;
-            --text-main: #222222;
-            --text-secondary: #555555;
-        }
+    <meta name="theme-color" content="#2c2c2c" />
+    <meta name="msapplication-TileColor" content="#e5b300" />
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    <!-- SEO essentials -->
+    <title>Wekee — moving company</title>
+    <meta
+      name="description"
+      content="Wekee Rwanda is your trusted local partner for everyday tasks, errands, and moving services. Built to serve, we connect individuals and businesses with reliable helpers for home moves, deliveries, furniture lifting, shopping runs, and more. Rooted in Rwanda, we pride ourselves on efficiency, professionalism, and simplicity — making life easier, one task at a time."
+    />
+    <link rel="canonical" href="https://wekee.vercel.app/" />
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--background);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 0 1rem;
-        }
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
 
-        header {
-            background-color: var(--primary);
-            color: #fff;
-            padding: 1.5rem 1rem;
-            text-align: center;
-        }
+    <!-- Open graph (fb, whatsapp, linkedin) -->
+    <meta property="og:title" content="Wekee • moving - academic support" />
+    <meta
+      property="og:description"
+      content="Rwanda's go-to platform for hiring professional help — from moving homes to running errands. Whether you need something picked up, delivered, or handled locally, Wkee connects you with reliable and vetted task helpers across Kigali, Musanze, Huye, and more. Rooted in Rwandan values, Wekee makes everyday life easier — fast, safe, and trusted by locals."
+    />
+    <meta
+      property="og:image"
+      content="https://wekee.vercel.app/images/brand/favicon.svg"
+    />
+    <meta property="og:url" content="https://wekee.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Wekee Rwanda" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
 
-        header h1 {
-            font-family: 'Satoshi', sans-serif;
-            font-size: 2rem;
-        }
+    <!-- Twitter Card (X) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Wekee • moving company" />
+    <meta
+      name="twitter:description"
+      content="Wekee is Rwanda’s go-to platform for hiring professional help — from moving homes to running errands. Whether you need something picked up, delivered, or handled locally, Wekee connects you with reliable and vetted task helpers across Kigali, Musanze, and more. Rooted in Rwandan values, Wekee makes everyday life easier — fast, safe, and trusted by locals."
+    />
+    <meta
+      name="twitter:image"
+      content="https://wekee.vercel.app/images/brand/favicon.svg"
+    />
+    <meta name="twitter:site" content="@wekee" />
 
-        nav {
-            margin-top: 1rem;
-        }
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="keywords"
+      content="trusted local partner, task and errand help, movers in rwanda, delivery and moving services, tutoring, student tutor in rwanda, home and office support in rwanda, reliable helpers, rwanda, kigali, kinyarwanda, professional moving company in rwanda,local event support, talent showcase management, flyer design and printing, promotional campaign assistance, student support task, event setup help, bill payment assistance, grocery delivery, parcel delivery, document pickup & drop, residential moving, long-distance moves, same-day local moves, movers in rwanda, moving services rwanda, errand services rwanda, task help rwanda, professional help rwanda, hire someone to do tasks rwanda, delivery & pickup services rwanda, home relocation rwanda, local assistant rwanda, student gig platform rwanda, movers in kigali, task helpers in musanze, professional help near me rwanda, errands service kigali, relocation company rwanda, local services rwanda "
+    />
+    <meta name="author" content="Iwmvictor" />
 
-        nav a {
-            margin: 0 0.75rem;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: bold;
-        }
+    <!-- Alternate language versions  -->
+    <link rel="alternate" hreflang="en" href="https://wekee.vercel.app" />
+    <link
+    rel="alternate"
+    hreflang="fr"
+    href="https://wekee.vercel.app/fr/"
+  />
 
-        .hero {
-            padding: 3rem 1rem;
-            text-align: center;
-        }
+  <!-- PWA & Apple Touch Icons -->
+  <link rel="manifest" href="/site.webmanifest" />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/images/brand/favicon.svg"
+  />
 
-        .hero h2 {
-            font-family: 'Neue Montreal', sans-serif;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 1rem;
-        }
-
-        .section {
-            max-width: 960px;
-            margin: 3rem auto;
-            padding: 0 1rem;
-        }
-
-        .section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .section p {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-        }
-
-        .card {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-            padding: 1.5rem;
-            flex: 1 1 280px;
-        }
-
-        footer {
-            background: #f2f2f2;
-            padding: 2rem 1rem;
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-
-        footer a {
-            color: var(--text-main);
-            text-decoration: none;
-        }
-
-        @media (max-width: 600px) {
-            .grid {
-                flex-direction: column;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <header>
-        <h1>Wekee</h1>
-        <nav>
-            <a href="#who">Who We Are</a>
-            <a href="#what">What We Do</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h2>We Move. We Help. We Deliver.</h2>
-        <p>At Wekee, we specialize in professional moving services and academic support across Kigali and Rwanda-wide.
-            Whether it's relocating your home or assisting with your college hustle — we’ve got your back.</p>
-    </section>
-
-    <section id="who" class="section">
-        <h3>Who We Are</h3>
-        <p>Wekee is a dedicated service company providing reliable residential & office moving solutions and essential
-            task-based assistance for students. We blend professionalism with care — ensuring your goods and academic
-            tasks are handled with efficiency and excellence.</p>
-    </section>
-
-    <section id="what" class="section">
-        <h3>What We Do</h3>
-
-        <div class="grid" style="margin-bottom: 10px;">
-            <div class="card">
-                <h4>🏡 Residential Moving</h4>
-                <p>Secure and efficient moving with packaging/unpacking services.</p>
-              </div>
-              <div class="card">
-                <h4>🏢 Office Relocations</h4>
-                <p>Organized business moves with expert logistics.</p>
-              </div>
-        </div>
-
-
-        <div class="grid">
-
-            <div class="card">
-                <h4>📚 Academic Assistance</h4>
-                <p>Assignments, essays, corrections, and follow-ups handled for you.</p>
-            </div>
-            <div class="card">
-                <h4>✍️ Handwriting Service</h4>
-                <p>Neatly handwritten notes, reports, and more — quick turnaround.</p>
-            </div>
-            <div class="card">
-                <h4>🧾 Stationery & Printing</h4>
-                <p>Need books, printouts, pens or USBs? We deliver it all.</p>
-            </div>
-            <div class="card">
-                <h4>🍽 Food Delivery Help</h4>
-                <p>We pick up from restaurants and deliver to your doorstep.</p>
-            </div>
-            <div class="card">
-                <h4>💻 Final Year Projects</h4>
-                <p>Support for research, typing, formatting, printing, and binding.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <p>Serving Kigali and all of Rwanda • Phone: <a href="tel:+250786969572">+250 786 969 572</a> • Email: <a
-                href="mailto:meyvnagency@gmail.com">meyvnagency@gmail.com</a></p>
-        <p>&copy; 2025 Wekee. Powered by <a href="https://meyvn.vercel.app">meyvn agency</a>.</p>
-    </footer>
-
-    <script>
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+  <!-- JSON-LD Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Wekee Rwanda",
+      "image": "https://wekee.vercel.app/images/brand/favicon.svg",
+      "@id": "https://wekee.vercel.app",
+      "url": "https://wekee.vercel.app",
+      "telephone": "+250786969572",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1st Floor, CENA-HOUSE, Opposite St Andre, KN 2 Ave",
+        "addressLocality": "Kigali",
+        "addressRegion": "RW",
+        "addressCountry": "RW"
+      },
+      "sameAs": [
+        "https://instagram.com/wekeerwanda",
+        "https://facebook.com/wekeerwanda"
+      ]
+    }
     </script>
-</body>
+    
 
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
