@@ -1,148 +1,245 @@
-$primary-color: rgb(44, 44, 44);
-$accent-color: #e5b300;
-$highlight-color: #007c91;
+$primary-color: rgb(21, 22, 24);
+$accent-color: rgb(248, 156, 13);
+$highlight-color: rgb(0, 102, 129);
+$black-color: rgb(0, 0, 0);
 $gray-color: rgb(245, 245, 245);
 $neutral-color: rgb(75, 75, 75);
 
-$transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
+$transition: 1s cubic-bezier(0.22, 0.78, 0.45, 1.02);
 
 // NAVBAR
 .header {
   width: 100%;
-  position: fixed;
-  z-index: 999999;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: transparent;
   box-shadow: 0 0 0.033rem 0 $highlight-color;
-  backdrop-filter: blur(1rem);
-  background: rgba($gray-color, 0.6);
 
-  .content {
+  .top {
     width: 100%;
     position: relative;
-    gap: 3rem;
-    display: flex;
-    padding: 1rem 0;
-    align-items: center;
-    justify-content: space-between;
+    background: $black-color;
 
-    .logo {
-      font-size: 2rem;
-      font-weight: 900;
-      color: $neutral-color;
-      transition: $transition;
-      user-select: none;
+    .content {
+      width: 100%;
+      position: relative;
+      gap: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-      &:hover {
-        color: $accent-color;
+      ul {
+        display: flex;
+
+        &.links {
+          gap: 1rem;
+          align-items: center;
+
+          a {
+            display: flex;
+            padding: 0.8rem 0;
+            position: relative;
+            color: $gray-color;
+            transition: $transition;
+
+            &:hover {
+              color: $accent-color;
+            }
+          }
+        }
+
+        &.socials {
+          gap: 0.6rem;
+          align-items: center;
+
+          a {
+            display: flex;
+            padding: 0.4rem;
+            overflow: hidden;
+            font-size: 0.9rem;
+            color: $gray-color;
+            align-items: center;
+            position: relative;
+            border-radius: 0.6rem;
+            background: $primary-color;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              transform: scaleX(0);
+              transform-origin: right;
+              background: $accent-color;
+              transition: transform 0.4s ease-in-out;
+            }
+
+            &:hover {
+              &::before {
+                transform: scaleX(1);
+                transform-origin: left;
+              }
+
+              color: $black-color;
+            }
+          }
+        }
       }
     }
 
-    ul {
+    @media (max-width: 500px) {
+      display: none;
+      transition: display 2s ease-in-out;
+    }
+  }
+
+  .main {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: $gray-color;
+
+    .content {
+      gap: 2rem;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
 
-      a {
+      .logo {
         display: flex;
-        padding: 0.8rem 1.2rem;
-        font-size: 1rem;
-        color: $primary-color;
-        text-transform: capitalize;
-        transition: $transition;
 
-        &:hover {
-          color: $accent-color;
-          border-radius: 6rem;
-          background: $gray-color;
-        }
-
-        &.active {
-          color: $gray-color;
-          border-radius: 6rem;
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: $primary-color;
           transition: $transition;
-          background: $highlight-color;
 
           &:hover {
-            background: $neutral-color;
+            color: $accent-color;
           }
         }
       }
 
-      @media (max-width: 1115px) {
-        display: none;
-      }
-    }
-
-    button {
-      gap: 0.6rem;
-      display: flex;
-      font-weight: 500;
-      padding: 0.8rem 1.2rem;
-      align-items: center;
-      color: $gray-color;
-      border-radius: 1rem;
-      transition: $transition;
-      background: $primary-color;
-
-      span {
+      ul {
+        gap: 1rem;
         display: flex;
+        align-items: center;
 
-        &.icon {
-          padding: 0.2rem;
-          font-size: 1.2rem;
+        a {
+          display: flex;
+          font-weight: 500;
+          padding: 1.5rem 0;
+          position: relative;
           color: $primary-color;
-          background: $gray-color;
-          border-radius: 0.4rem;
-          transition: all 2s ease-in-out;
-        }
-
-        &.text {
-          font-size: 1.1rem;
-          color: $gray-color;
           transition: $transition;
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0.1rem;
+            background: transparent;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.6s ease-in-out;
+          }
+
+          &:hover {
+            &::before {
+              transform-origin: left;
+              transform: scaleX(1);
+              background: $accent-color;
+            }
+
+            color: $accent-color;
+          }
+
+          &.active {
+            color: $highlight-color;
+
+            &::before {
+              transform-origin: left;
+              transform: scaleX(1);
+              background: $highlight-color;
+            }
+          }
+        }
+
+        @media (max-width: 880px) {
+          display: none;
         }
       }
 
-      &:hover {
-        cursor: pointer;
-        color: $primary-color;
-        background: $accent-color;
-
-        .icon {
-          background: $primary-color;
-          color: $accent-color;
-          border-radius: 0.6rem;
-          transform: rotate(315deg);
-        }
-
-        .text {
-          color: $primary-color;
-        }
-      }
-    }
-
-    .start {
-      @media (max-width: 560px) {
-        display: none;
-      }
-    }
-
-    @media (min-width: 1115px) {
-      .menu {
-        display: none;
-      }
-    }
-
-    .menu {
-      position: relative;
-
-      button {
-        font-size: 2rem;
-        padding: 0.3rem 0.4rem;
-        border-radius: 0.3rem;
+      .btn {
+        display: flex;
+        font-size: 1rem;
+        font-weight: 500;
+        overflow: hidden;
+        padding: 0.8rem 1rem;
+        color: $gray-color;
+        position: relative;
+        border-radius: 0.6rem;
+        background: $primary-color;
         transition: $transition;
 
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: "";
+          width: 100%;
+          height: 100%;
+          transform: scaleX(0);
+          transform-origin: right;
+          background: $accent-color;
+          transition: transform 0.6s ease-in-out;
+        }
+
         &:hover {
-          border-radius: 1rem;
+          color: $black-color;
+
+          &::before {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+
+        @media (max-width: 420px) {
+          display: none;
+        }
+      }
+
+      @media (min-width: 880px) {
+        .menu {
+          display: none;
+        }
+      }
+
+      @media (max-width: 880px) {
+        padding: 0.7rem 0;
+      }
+
+      .menu {
+        position: relative;
+
+        button {
+          font-size: 2rem;
+          color: $black-color;
+          padding: 0.3rem 0.4rem;
+          border-radius: 0.3rem;
+          transition: $transition;
+
+          &:hover {
+            cursor: pointer;
+            color: $highlight-color;
+          }
         }
       }
     }
@@ -152,9 +249,16 @@ $transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
   width: 100%;
   z-index: 999999;
   position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
   transition: all $transition ease-in-out;
   backdrop-filter: blur(1rem);
   background: rgba($gray-color, 0.3);
+
+  @media (min-width: 880px) {
+    display: none;
+  }
 
   .content {
     width: 100%;

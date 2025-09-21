@@ -1,78 +1,96 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
 
 import "./../style/component.scss";
 
-import { LuArrowUpRight } from "react-icons/lu";
+import { Link, NavLink } from "react-router-dom";
+import { LuFacebook, LuInstagram } from "react-icons/lu";
+import { FaXTwitter } from "react-icons/fa6";
 import { IoClose, IoMenuOutline } from "react-icons/io5";
 
 const Header = () => {
   const [menuModal, SetMenuModal] = useState(false);
-  const location = useLocation();
-
-  const isActive = (path, hash = "") => {
-    if (hash) {
-      return location.pathname === path && location.hash === hash
-        ? "active"
-        : "";
-    }
-    return location.pathname === path ? "active" : "";
-  };
-
   return (
     <>
       <div className="header">
-        <div className="container">
-          <div className="content">
-            <div className="menu">
-              <button onClick={() => SetMenuModal(true)}>
-                <span>
-                  <IoMenuOutline />
-                </span>
-              </button>
+        <div className="top">
+          <div className="container">
+            <div className="content">
+              <ul className="links">
+                <li>
+                  <Link>Blog</Link>
+                </li>
+                <li>
+                  <Link>Career</Link>
+                </li>
+                <li>
+                  <Link>For developers</Link>
+                </li>
+              </ul>
+              <ul className="socials">
+                <li>
+                  <Link>
+                    <span>
+                      <LuFacebook />
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link>
+                    <span>
+                      <LuInstagram />
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link>
+                    <span>
+                      <FaXTwitter />
+                    </span>
+                  </Link>
+                </li>
+              </ul>
             </div>
-            <Link to={"/"} className="logo">
-              <span>wekee.</span>
-            </Link>
-            <ul>
-              <li>
-                <Link to={"/"} className={isActive("/")}>
-                  Home
+          </div>
+        </div>
+        <div className="main">
+          <div className="container">
+            <div className="content">
+              <div className="menu">
+                <button onClick={() => SetMenuModal(true)}>
+                  <span>
+                    <IoMenuOutline />
+                  </span>
+                </button>
+              </div>
+              <Link to={"/"} className="logo">
+                <h3>wekee.</h3>
+              </Link>
+              <ul>
+                <li>
+                  <NavLink to={"/usecase"}>Use case</NavLink>
+                </li>
+                <li>
+                  <NavLink to={"/about"}>About us</NavLink>
+                </li>
+                <li>
+                  <NavLink to={"/shop"}>Shop</NavLink>
+                </li>
+                <li>
+                  <NavLink to={"/resources"}>Resources</NavLink>
+                </li>
+                <li>
+                  <NavLink to={"/contact"}>Contact</NavLink>
+                </li>
+              </ul>
+              <div>
+                <Link className="btn">
+                  <span>Get Started</span>
                 </Link>
-              </li>
-              <li>
-                <Link to={"/use-cases"} className={isActive("/use-cases")}>
-                  use cases
-                </Link>
-              </li>
-              <li>
-                <Link to={"/#about"} className={isActive("/", "#about")}>
-                  about
-                </Link>
-              </li>
-              <li>
-                <Link to={"/resources"} className={isActive("/resources")}>
-                  resources
-                </Link>
-              </li>
-              <li>
-                <Link to={"/contact"} className={isActive("/contact")}>
-                  contact
-                </Link>
-              </li>
-            </ul>
-            <div>
-              <button className="start">
-                <span className="icon">
-                  <LuArrowUpRight />
-                </span>
-                <span className="text">Get Started</span>
-              </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
       {menuModal && (
         <>
           <div className="menu-modal">

@@ -2,34 +2,51 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/images/brand/favicon.svg" />
-
-    <!-- Mobile - display optimization -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#2c2c2c" />
-    <meta name="msapplication-TileColor" content="#e5b300" />
+    <meta name="format-detection" content="telephone=no" />
 
-    <!-- SEO essentials -->
-    <title>Wekee — moving company</title>
+    <title>Wekee Rwanda | Reliable Moving, Delivery & Courier Services</title>
     <meta
       name="description"
-      content="Wekee Rwanda is your trusted local partner for everyday tasks, errands, and moving services. Built to serve, we connect individuals and businesses with reliable helpers for home moves, deliveries, furniture lifting, shopping runs, and more. Rooted in Rwanda, we pride ourselves on efficiency, professionalism, and simplicity — making life easier, one task at a time."
+      content="Wekee offers fast and trusted moving, delivery, and courier services in Kigali, Musanze, Huye, and across Rwanda. Book your move or delivery today with a local logistics partner you can rely on."
     />
+    <meta
+      name="keywords"
+      content="Wekee Rwanda, moving services Rwanda, delivery services Rwanda, courier Rwanda, logistics company Rwanda, local movers, transport Rwanda, Kigali delivery, Musanze moving, Huye courier, Rwanda logistics"
+    />
+    <meta name="author" content="meyvn agency" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#F29C13" />
+    <link rel="icon" type="image/svg+xml" href="/images/brand/favicon.svg" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/brand/favicon.svg"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="canonical" href="https://wekee.vercel.app/" />
 
-    <!-- google fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Open graph (fb, whatsapp, linkedin) -->
-    <meta property="og:title" content="Wekee • moving - academic support" />
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Wekee Rwanda | Reliable Moving & Delivery Services"
+    />
     <meta
       property="og:description"
-      content="Rwanda's go-to platform for hiring professional help — from moving homes to running errands. Whether you need something picked up, delivered, or handled locally, Wkee connects you with reliable and vetted task helpers across Kigali, Musanze, Huye, and more. Rooted in Rwandan values, Wekee makes everyday life easier — fast, safe, and trusted by locals."
+      content="From household moves to courier deliveries — Wekee is your trusted logistics partner across Rwanda."
     />
     <meta
       property="og:image"
@@ -41,53 +58,65 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="fr_FR" />
 
-    <!-- Twitter Card (X) -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Wekee — Move & Get Help in Rwanda" />
+    <meta
+      name="twitter:title"
+      content="Wekee | Rwanda’s Trusted Moving & Delivery Service"
+    />
     <meta
       name="twitter:description"
-      content="Wekee connects you with trusted helpers for moving, errands, deliveries, and more in Rwanda — fast, safe, and local."
+      content="Fast, local, and professional logistics services in Rwanda — including moving, courier, and delivery across Kigali, Musanze, and Huye."
     />
     <meta
       name="twitter:image"
       content="https://wekee.vercel.app/images/brand/og.png"
     />
-    <meta name="twitter:site" content="@wekee" />
+    <meta name="twitter:site" content="@wekeerwanda" />
 
-    <!-- Additional SEO Meta Tags -->
-    <meta name="robots" content="index, follow" />
-    <meta
-      name="keywords"
-      content="trusted local partner, task and errand help, movers in rwanda, delivery and moving services, tutoring, student tutor in rwanda, home and office support in rwanda, reliable helpers, rwanda, kigali, kinyarwanda, professional moving company in rwanda,local event support, talent showcase management, flyer design and printing, promotional campaign assistance, student support task, event setup help, bill payment assistance, grocery delivery, parcel delivery, document pickup & drop, residential moving, long-distance moves, same-day local moves, movers in rwanda, moving services rwanda, errand services rwanda, task help rwanda, professional help rwanda, hire someone to do tasks rwanda, delivery & pickup services rwanda, home relocation rwanda, local assistant rwanda, student gig platform rwanda, movers in kigali, task helpers in musanze, professional help near me rwanda, errands service kigali, relocation company rwanda, local services rwanda "
-    />
-    <meta name="author" content="Iwmvictor" />
-
-    <!-- Alternate language versions  -->
-    <link rel="alternate" hreflang="en" href="https://wekee.vercel.app" />
+    <!-- Alternate language versions -->
+    <link rel="alternate" hreflang="en" href="https://wekee.vercel.app/" />
     <link rel="alternate" hreflang="fr" href="https://wekee.vercel.app/fr/" />
-
-    <!-- PWA & Apple Touch Icons -->
-    <link rel="manifest" href="/site.webmanifest" />
     <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/images/brand/favicon.svg"
+      rel="alternate"
+      hreflang="kiny"
+      href="https://wekee.vercel.app/kiny/"
     />
 
-    <!-- Manifest  -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- Local SEO (cities served) -->
+    <link
+      rel="alternate"
+      hreflang="en-rw"
+      href="https://wekee.vercel.app/kigali/"
+    />
+    <link
+      rel="alternate"
+      hreflang="en-rw"
+      href="https://wekee.vercel.app/musanze/"
+    />
+    <link
+      rel="alternate"
+      hreflang="en-rw"
+      href="https://wekee.vercel.app/huye/"
+    />
 
-    <!-- JSON-LD Data -->
+    <!-- JSON-LD Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Wekee Rwanda",
-        "logo": "https://wekee.vercel.app/images/logo.png",
-        "image": "https://wekee.vercel.app/images/brand/og.png",
         "@id": "https://wekee.vercel.app",
+        "name": "Wekee Rwanda",
+        "description": "Wekee provides reliable moving, courier, and delivery services in Kigali, Musanze, Huye, and across Rwanda.",
         "url": "https://wekee.vercel.app",
+        "logo": "https://wekee.vercel.app/images/brand/logo.png",
+        "image": "https://wekee.vercel.app/images/brand/og.png",
+        "priceRange": "$$",
         "telephone": "+250786969572",
+        "sameAs": [
+          "https://instagram.com/wekeerwanda",
+          "https://facebook.com/wekeerwanda"
+        ],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "1st Floor, CENA-HOUSE, Opposite St Andre, KN 2 Ave",
@@ -95,15 +124,29 @@
           "addressRegion": "RW",
           "addressCountry": "RW"
         },
-        "sameAs": [
-          "https://instagram.com/wekeerwanda",
-          "https://instagram.com/meyvnagency",
-          "https://facebook.com/wekeerwanda"
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -1.9441,
+          "longitude": 30.0619
+        },
+        "areaServed": [
+          {
+            "@type": "Place",
+            "name": "Kigali"
+          },
+          {
+            "@type": "Place",
+            "name": "Musanze"
+          },
+          {
+            "@type": "Place",
+            "name": "Huye"
+          }
         ],
-        "description": "Wekee connects Rwandans with reliable help for moving, errands, deliveries and more in Kigali, Musanze and Huye.",
+        "openingHours": "Mo-Sa 08:00-18:00",
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": "+250781996271",
+          "telephone": "+250786969572",
           "contactType": "Customer Service"
         }
       }

@@ -4,6 +4,8 @@
   --highlight-color: #007c91;
   --gray-color: #f5f5f5;
   --neutral-color: #4b4b4b;
+
+  --transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
 }
 
 ::selection {
@@ -29,18 +31,26 @@ button,
 option {
   font-size: 1rem;
   font-weight: 400;
+  transition: var(--transition);
 }
 
 button,
 input,
 select {
   background: transparent;
+  transition: var(--transition);
   outline: none;
   border: none;
 }
 
 a {
   text-decoration: none;
+}
+
+span {
+  display: flex;
+  position: relative;
+  align-items: center;
 }
 
 ul,

@@ -3,37 +3,40 @@ import { assets } from "../../assets/assets";
 
 const services = [
   {
-    img: assets.images.img.img1,
-    title: "Residential Moving",
-    tag: "For individuals, families, and students",
-    list: [
-      "Home relocation",
-      "Apartment moves",
-      "Student moves",
-      "Packing & Unpacking",
-    ],
+    image: assets.images.img.image1,
+    title: "Home & Office Moving",
+    description:
+      "We pack, load, transport, and unload your household or office items — whether you're moving locally or across cities. We provide boxes and handle heavy lifting for a stress-free move.",
   },
   {
-    img: assets.images.img.img2,
-    title: "Commercial Moving",
-    tag: "For offices, shops, and businesss.",
-    list: [
-      "Office relocation",
-      "Store moves",
-      "After-hours moves",
-      "Equipment transport",
-    ],
+    image: assets.images.img.image7,
+    title: "Parcel Delivery",
+    description:
+      "Door-to-door delivery of packages, documents, and personal items across Rwanda. Ideal for individuals, online sellers, or small businesses needing reliable courier services.",
   },
   {
-    img: assets.images.img.img3,
-    title: "On-Demand Moves",
-    tag: "For flexibe, urget or unique needs.",
-    list: [
-      "Furniture Delivery",
-      "Local Pickups",
-      "Same-day service",
-      "Event logistics",
-    ],
+    image: assets.images.img.image5,
+    title: "Same-Day Delivery",
+    description:
+      "Urgent deliveries made on the same day — perfect for documents, forgotten items, last-minute gifts, or critical packages. We prioritize speed without compromising safety.",
+  },
+  {
+    image: assets.images.img.image9,
+    title: "Furniture & Bulk Transport",
+    description:
+      "We specialize in moving large items like beds, fridges, wardrobes, and sofas. Our team ensures careful handling, wrapping, and secure transport of all bulky goods.",
+  },
+  {
+    image: assets.images.img.image8,
+    title: "Relocation Services",
+    description:
+      "Designed for families or businesses relocating long-distance. Includes professional packing, disassembly, safe loading, transport, and unpacking at your new location.",
+  },
+  {
+    image: assets.images.img.image2,
+    title: "Business Deliveries",
+    description:
+      "Scheduled or on-demand delivery services for businesses. Includes pickup from your store or warehouse and delivery to clients, with tracking and real-time updates.",
   },
 ];
 
@@ -43,23 +46,20 @@ const HomeServices = () => {
       <div className="homeservice">
         <div className="container">
           <div className="content">
-            <div className="title">
-              <p>What we serve</p>
-              <h2>Personalized moving solutions</h2>
-            </div>
-
             <div className="boxes">
               {services.map((service, index) => (
                 <div className="box" key={index}>
-                  <img src={service.img} loading="lazy" alt="Cover" />
-                  <div className="conts">
-                    <h3>{service.title}</h3>
-                    <span>{service.tag}</span>
-                    <ul>
-                      {service.list.map((li,i) => (
-                        <li key={i}>{li}</li>
-                      ))}
-                    </ul>
+                  <div className="img">
+                    <img src={service.image} loading="lazy" alt="Cover" />
+                  </div>
+                  <div className="text">
+                    <div>
+                      <h3>{service.title}</h3>
+                      <p>{service.description}</p>
+                    </div>
+                  </div>
+                  <div className="count">
+                    {index + 1}
                   </div>
                 </div>
               ))}
